@@ -1,0 +1,30 @@
+{
+    "date": "number",
+    "time": {
+        "went_to_bed": "time",
+        "woke_up": "time",
+        "fell_asleep_in": "time",
+        "total_time_slept": "number"
+    },    
+    "woke_up_at_night": [{
+        "time": "time",
+        "reason": "number",
+        "awake_for": "time"
+        
+    }],
+    "sleep_quality": {
+        "overall": "string [bad, normal, good]",
+        "intensity": "number [1-10]"
+    },
+    "activity_before_bed": "string",
+    "took_an_afternoon_nap": "boolean",
+    "ease_of_waking_up": {
+        "overall": "string [difficult, normal, easy]",
+        "intensity": "number [1-10]"
+    },
+    "feelings_in_the_morning": {
+        "rested": "boolean",
+        "positive": "boolean",
+        "negative": "boolean"
+    }
+}

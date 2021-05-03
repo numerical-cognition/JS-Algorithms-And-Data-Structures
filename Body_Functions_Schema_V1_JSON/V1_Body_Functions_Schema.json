@@ -1,0 +1,19 @@
+{
+    "time": "number",
+    "hygiene_action": {
+        "showering": "boolean",
+        "brushing_teeth": "boolean",
+        "washing_face": "boolean",
+        "clipping_nails": "boolean",
+        "shaving": "boolean"
+    },
+    "bodily_excretion": {
+        "urination": "boolean",
+        "defecation": "boolean"
+    },
+    "times_Showering":"number",
+    "times_brushing_teeth": "number",
+	"times_washing_face": "number",
+	"clipping_nails": "boolean",
+	"shaving": "boolean"
+}
