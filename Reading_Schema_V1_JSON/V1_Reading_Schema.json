@@ -1,0 +1,21 @@
+{   
+    "date": "number",
+    "time": {
+        "started": "number",
+        "finished": "number",
+        "total_time": "number"
+    },
+    "book_title": "string",
+    "pages_read": {
+        "start_page": "number",
+        "end_page": "number",
+        "total_pages": "number"
+    },
+    "reading_difficulty": "string [easy, normal, hard]",
+    "reading_speed": "number [total_time/total_pages]",
+    "main_ideas": [{
+        "idea": "string",
+        "idea_quality": "string [bad, good]",
+        "my_opinion": "string"
+    }]   
+}

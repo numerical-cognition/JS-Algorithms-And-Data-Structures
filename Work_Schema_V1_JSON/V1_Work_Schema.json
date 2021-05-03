@@ -1,0 +1,44 @@
+{
+    "date": "number",
+    "time": {
+        "getting_to_work": "number",
+        "started_work": "number",
+        "finished_work": "number",
+        "getting_home_from_work": "number",
+        "total_work_time": "number",
+        "total_commute_time": "number"
+    },
+    "work_tasks": [
+        {
+            "task": "string",
+            "time": {
+                "started": "number",
+                "finished": "number",
+                "total_time": "number"
+            },
+            "difficulty": "string [easy, normal, hard]",
+            "required_help": "boolean",
+            "collaborators": ["string"],
+            "notes": "string"
+        }
+    ],
+    "brakes": {
+        "time": [
+            {
+            "started": "number",
+            "finished": "number",
+            "total_time": "number"
+            }
+        ]
+    },
+    "meetings": {
+        "time": {
+            "started": "number",
+            "finished": "number",
+            "total_time": "number"
+        },
+        "topic": "string",
+        "attendees": "string",
+        "importance": "string [low, medium, high]"
+    }
+}

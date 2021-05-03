@@ -1,0 +1,57 @@
+{
+    "name": {
+        "first": "string",
+        "last": "string",
+        "middle": "string",
+        "nickname": "string",
+        "phonetic_name": "string",
+        "notes": "string"
+    },
+    "telephone": {
+        "mobile": [
+            {
+            "number": "number",
+            "notes": "string"
+            }
+        ],
+        "work":[
+            {
+            "number": "number",
+            "notes": "string"
+            }
+        ],
+        "home": [
+            {
+            "number": "number",
+            "notes": "string"
+            }
+        ]
+    },
+    "digital_contact": {
+        "email": {
+            "personal": ["string"],
+            "work": ["string"]
+        },
+        "website": {
+            "personal": ["string"],
+            "work": ["string"]
+        },
+        "fax": {
+            "personal": ["string"],
+            "work": ["string"]
+        },
+        "notes": "string"
+    },
+    "address": {
+        "home": ["string"],
+        "work": ["string"],
+        "notes": "string"
+    },
+    "company": [{
+        "name": ["string"],
+        "department": ["string"],
+        "job_title": ["string"]
+    }],
+    "birthday": "number",
+    "notes": "string"
+}

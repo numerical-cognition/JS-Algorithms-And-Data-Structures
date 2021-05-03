@@ -1,0 +1,9 @@
+{
+    "date": "number",
+    "time": [{
+        "time_consumed": "number"
+    }],
+    "amount": "number",
+    "substance_type": "string [alcohol, tobacco, pills, drugs]",
+    "notes": "string"
+}

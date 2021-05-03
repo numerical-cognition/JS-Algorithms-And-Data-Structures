@@ -1,0 +1,16 @@
+{   
+    "date": "number",
+    "time": {
+        "started": "number",
+        "finished": "number",
+        "total_time": "number"
+    },
+    "study_topic": "string",
+    "topic_difficulty": "string [easy, normal, hard]",
+    "main_ideas": [{
+        "idea": "string",
+        "idea_quality": "string [bad, good]",
+        "my_opinion": "string"
+    }],
+    "learning_medium": "string [book, audio, video]"
+}
