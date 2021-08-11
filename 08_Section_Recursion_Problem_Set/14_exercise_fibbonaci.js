@@ -7,23 +7,53 @@
 // fib(28) // 317811
 // fib(35) // 9227465
 
+
+// VERSION 1 - Using a list 
+
 function fib(num) {
-    let a = 1;
-    let b = 1;
+    let fibonnaci = [1, 1];
 
-    function helper(seq) {
-        if (seq <= 1) return;
+    function helper(length) {
+        if (length === num) return;
 
-        a = b - a;
-        b = b + a;
+        fibonnaci.push(fibonnaci[length - 1] + fibonnaci[length - 2])
 
-        return helper(seq - 1);
+        return helper(fibonnaci.length);
     }
 
-    helper(num);
+    helper(fibonnaci.length);
 
-    return b;
+    return fibonnaci.pop();
 }
+
+
+// VERSION 2 - Computing a number (backwards)
+
+// function fib(num) {
+//     let a = 1;
+//     let b = 1;
+
+//     function helper(seq) {
+//         if (seq <= 1) return;
+
+//         a = b - a;
+//         b = b + a;
+
+//         return helper(seq - 1);
+//     }
+
+//     helper(num);
+
+//     return b;
+// }
+
+
+// // VERSION 3 - Pure Recursion
+
+// function fib(n){
+//     if (n <= 2) return 1;
+//     return fib(n-1) + fib(n-2);
+// }
 
 console.log(fib(3)) // 2
 console.log(fib(4)) // 3
@@ -31,19 +61,3 @@ console.log(fib(5)) // 5
 console.log(fib(10)) // 55
 console.log(fib(28)) // 317811
 console.log(fib(35)) // 9227465
-
-
-
-// VERSION 2 - Colts' solution
-
-function fib2(n){
-    if (n <= 2) return 1;
-    return fib(n-1) + fib(n-2);
-}
-
-console.log(fib2(3)) // 2
-console.log(fib2(4)) // 3
-console.log(fib2(5)) // 5
-console.log(fib2(10)) // 55
-console.log(fib2(28)) // 317811
-console.log(fib2(35)) // 9227465

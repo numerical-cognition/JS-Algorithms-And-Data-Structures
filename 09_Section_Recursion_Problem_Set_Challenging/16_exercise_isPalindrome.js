@@ -3,21 +3,41 @@
 // (reads the same forward and backward). Otherwise it returns false.
 
 
+// VERSION 1 - String solution
+
 function isPalindrome(str) {
-    let result = [];
-
+    
     function helper(newStr) {
-        if(newStr.length <= 0) return;
+        if (newStr.length === 0) return true;
 
-        result.unshift(newStr[0]);
-        // console.log({result, newStr, curr: newStr[0]});
+        let lastLetter = newStr.length - 1;
 
-        return helper(newStr.slice(1));
+        if (newStr[0] !== newStr[lastLetter]) return false;
+        else return helper(newStr.slice(1, lastLetter));
     }
 
-    helper(str);
-    return str === result.join("");
+    return helper(str);
 }
+
+
+// VERSION 2 - Array solution
+
+// function isPalindrome(str) {
+//     let result = [];
+
+//     function helper(newStr) {
+//         if(newStr.length <= 0) return;
+
+//         result.unshift(newStr[0]);
+//         // console.log({result, newStr, curr: newStr[0]});
+
+//         return helper(newStr.slice(1));
+//     }
+
+//     helper(str);
+//     return str === result.join("");
+// }
+
 
 console.log(isPalindrome('awesome')) // false
 console.log(isPalindrome('foobar')) // false
