@@ -1,0 +1,9 @@
+{   
+    "date": "number",
+    "time": {
+        "started": "number",
+        "finished": "number",
+        "total_time": "number"
+    },
+    "location": "string"
+}

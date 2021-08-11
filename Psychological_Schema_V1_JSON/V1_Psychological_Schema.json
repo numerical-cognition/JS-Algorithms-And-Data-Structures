@@ -1,0 +1,67 @@
+{
+    "date": "number",
+    "mood": {
+        "overall": "string [negative, neutral, positive]",
+        "intensity": "number [1-10]"
+    },
+    "emotions": {
+        "overall": "string [negative, neutral, positive]",
+        "intensity": "number [1-10]",
+        "happiness": {
+            "intensity": "number [1-10]",
+            "cause": "string"
+        },
+        "sadness": {
+            "intensity": "number [1-10]",
+            "cause": "string"
+        },
+        "fear": {
+            "intensity": "number [1-10]",
+            "cause": "string"
+        },
+        "anger": {
+            "intensity": "number [1-10]",
+            "cause": "string"
+        },
+        "surprise": {
+            "intensity": "number [1-10]",
+            "cause": "string"
+        },
+        "disgust": {
+            "intensity": "number [1-10]",
+            "cause": "string"
+        }
+    },
+    "cognition": {
+        "overall": "string [low, medium, high]",
+        "intensity": "number [1-10]",
+        "memory": {
+            "intensity": "number [1-10]",
+            "activity": "string"
+        },
+        "comprehention": {
+            "intensity": "number [1-10]",
+            "activity": "string"
+        },
+        "concentration": {
+            "intensity": "number [1-10]",
+            "activity": "string"
+        },
+        "stress": {
+            "intensity": "number [1-10]",
+            "activity": "string"
+        },
+        "motivation": {
+            "intensity": "number [1-10]",
+            "activity": "string"
+        },
+        "creativity": {
+            "intensity": "number [1-10]",
+            "activity": "string"
+        }
+    },
+    "behavior": {
+        "overall": "string [disappointing, ordinary, exemplary]",
+        "intensity": "number [1-10]"
+    }
+}
