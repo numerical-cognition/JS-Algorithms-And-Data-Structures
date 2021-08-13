@@ -23,11 +23,6 @@ function same1(arr1, arr2){
     return true;
 }
 
-console.log(same1([1,2,3,2], [9,1,4,4])) // true
-console.log(same1([1, 2, 3], [1, 9])); // false
-console.log(same1([1, 2, 1], [4, 1, 4])); // false
-
-
 // VERSION 2 - frequency counter approach (Good)
 
 function same2(arr1, arr2){

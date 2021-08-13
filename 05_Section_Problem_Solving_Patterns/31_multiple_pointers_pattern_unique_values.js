@@ -3,7 +3,6 @@
 // but it will always be sorted.
 
 
-
 function countUniqueValues(list){
     if(list.length === 0) return 0;
 
