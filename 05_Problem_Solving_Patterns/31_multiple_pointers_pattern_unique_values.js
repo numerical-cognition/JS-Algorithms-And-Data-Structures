@@ -4,19 +4,33 @@
 
 
 function countUniqueValues(list){
-    if(list.length === 0) return 0;
+    if (list.length === 0) return 0;
 
-    let i = 0;
-    for (let j = 1; j < list.length; j++) {
-        if (list[i] < list[j]) {
-            i++;
-            list[i] = list[j]
-        }
+    let unique = 0;
+
+    for (let i = 1; i <= list.length; i++) {
+        if (list[unique] !== list[i]) unique++;
     }
-    return {uniqueCount: i + 1, uniqueValues: list.slice(0, i +1)};
+
+    return unique;
 }
 
 console.log(countUniqueValues([])) // 0
 console.log(countUniqueValues([1, 1, 1, 1, 1, 2])) // 2
 console.log(countUniqueValues([1, 2, 3, 4, 4])) // 4
 console.log(countUniqueValues([1, 2, 3, 4, 5, 6, 7, 7])) // 7
+
+
+
+// function countUniqueValues(list){
+//     if(list.length === 0) return 0;
+
+//     let i = 0;
+//     for (let j = 1; j < list.length; j++) {
+//         if (list[i] < list[j]) {
+//             i++;
+//             list[i] = list[j]
+//         }
+//     }
+//     return {uniqueCount: i + 1, uniqueValues: list.slice(0, i +1)};
+// }
