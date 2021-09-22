@@ -8,44 +8,88 @@ console.clear();
 
 function findLongestSubstring(str) {
 
-    let window = 1;
-    let max = 1;
-    let list = []
+    let index = 0,
+        pointer = 0,
+        length = 0,
+        maxLen = 0,
+        counter = {},
+        currentChar = "";
 
-    while(window < str.length) {
+    while (index + pointer < str.length) {
+        currentChar = str[index + pointer];
 
-        for(i = 0; i <= window; i++) {
-            list.push(str[i])
+
+        // if currentChar exists in the counter, reset all vars and increment index by 1
+        if (counter[currentChar]) {
+            index++;
+            pointer = 0;
+            length = 0;
+            counter = {};
         }
 
-        let base = list.join("");
-
-        for(j = window; j < str.length; j++) {
-            // if(base.includes(str[j])) 
-
-            base.concat(str[j]);
-            base = base.slice(1)
-            console.log({window, max: Math.max(base.length, max), letter: str[j], base});
+        // if currentChar does NOT exist, add it to the counter and increment vars.
+        else {
+            counter[currentChar] = 1;
+            pointer++;
+            length++;
         }
 
-        
-
-        window++;
-        max = Math.max(base.length, max);
-        list = [];
+        maxLen = Math.max(length, maxLen);
     }
 
-    return max;
+    return maxLen;
 }
 
 
 
-
 console.log(findLongestSubstring('')) // 0
-console.log(findLongestSubstring('ritthm')) // test
-// console.log(findLongestSubstring('rithmschool')) // 7
-// console.log(findLongestSubstring('thisisawesome')) // 6
-// console.log(findLongestSubstring('thecatinthehat')) // 7
-// console.log(findLongestSubstring('bbbbbb')) // 1
-// console.log(findLongestSubstring('longestsubstring')) // 8
-// console.log(findLongestSubstring('thisishowwedoit')) // 6
+console.log(findLongestSubstring('ritthm')) // 3
+console.log(findLongestSubstring('rithmschool')) // 7
+console.log(findLongestSubstring('thisisawesome')) // 6
+console.log(findLongestSubstring('thecatinthehat')) // 7
+console.log(findLongestSubstring('bbbbbb')) // 1
+console.log(findLongestSubstring('longestsubstring')) // 8
+console.log(findLongestSubstring('thisishowwedoit')) // 6
+
+
+
+
+
+
+
+
+// function findLongestSubstring(str) {
+
+//     let index = 0,
+//         seeker = 0,
+//         length = 0,
+//         maxLen = 0,
+//         counter = {},
+//         targetStr = "",
+//         targetChar = "";
+
+
+//     while (index < str.length && index + seeker < str.length) {
+//         targetChar = str[index + seeker];
+
+//         // console.log({ index, maxLen, seeker, length, targetChar, targetStr, counter })
+
+//         if (counter[targetChar]) {
+//             index++;
+//             seeker = 0;
+//             length = 0;
+//             targetStr = "";
+//             counter = {};
+//         } else {
+//             counter[targetChar] = (counter[targetChar] || 0) + 1;
+//             targetStr = targetStr + targetChar;
+//             seeker++;
+//             length++;
+//         }
+
+//         maxLen = Math.max(length, maxLen);
+
+//     }
+
+//     return maxLen;
+// }

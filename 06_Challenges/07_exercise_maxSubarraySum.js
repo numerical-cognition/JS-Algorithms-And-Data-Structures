@@ -12,8 +12,8 @@ console.clear();
 function maxSubarraySum(list, segment) {
     if(list.length < segment) return null;
 
-    let max = 0;
-    let temp = 0;
+    let max = 0,
+        temp = 0;
 
     for(let i = 0; i < segment; i++) {
         temp += list[i];
@@ -28,7 +28,7 @@ function maxSubarraySum(list, segment) {
     return max;
 }
 
- 
+
 console.log(maxSubarraySum([100, 200, 300, 400], 2)) // 700
 console.log(maxSubarraySum([1, 4, 2, 10, 23, 3, 1, 0, 20], 4))  // 39 
 console.log(maxSubarraySum([-3, 4, 0, -2, 6, -1], 2)) // 5
