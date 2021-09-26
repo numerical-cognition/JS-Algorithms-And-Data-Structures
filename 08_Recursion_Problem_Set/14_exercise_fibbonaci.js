@@ -7,27 +7,46 @@
 // fib(28) // 317811
 // fib(35) // 9227465
 
+console.clear();
 
 // VERSION 1 - Using a list 
 
 function fib(num) {
-    let fibonnaci = [1, 1];
+    const fibonnaci = [1, 1];
 
-    function helper(length) {
-        if (length === num) return;
+    function helper(a, b, helperNum) {
+        if (helperNum <= 1) return;
 
-        fibonnaci.push(fibonnaci[length - 1] + fibonnaci[length - 2])
+        fibonnaci.push(a + b);
 
-        return helper(fibonnaci.length);
+        return helper(b, a + b, helperNum - 1)
     }
 
-    helper(fibonnaci.length);
+    helper(1, 1, num)
 
-    return fibonnaci.pop();
+    return fibonnaci[num - 1];
 }
 
+// VERSION 2  - Using a list 
 
-// VERSION 2 - Computing a number (backwards)
+// function fib(num) {
+//     let fibonnaci = [1, 1];
+
+//     function helper(length) {
+//         if (length === num) return;
+
+//         fibonnaci.push(fibonnaci[length - 1] + fibonnaci[length - 2])
+
+//         return helper(fibonnaci.length);
+//     }
+
+//     helper(fibonnaci.length);
+
+//     return fibonnaci.pop();
+// }
+
+
+// VERSION 3 - Computing a number (backwards)
 
 // function fib(num) {
 //     let a = 1;
@@ -48,12 +67,13 @@ function fib(num) {
 // }
 
 
-// // VERSION 3 - Pure Recursion
+// // VERSION 4 - Pure Recursion
 
 // function fib(n){
 //     if (n <= 2) return 1;
 //     return fib(n-1) + fib(n-2);
 // }
+
 
 console.log(fib(3)) // 2
 console.log(fib(4)) // 3
